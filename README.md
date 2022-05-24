@@ -25,6 +25,11 @@ function authMiddleware(root, args, ctx, info, next) {
     // your middleware logic
     // call next() to forward it to the next middleware or to your resolver
 }
+
+function permissionMiddleware(root, args, ctx, info, next) {
+    // your middleware logic
+    // call next() to forward it to the next middleware or to your resolver
+}
 ```
 
 2. Express level middleware
