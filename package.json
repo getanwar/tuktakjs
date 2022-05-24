@@ -16,9 +16,11 @@
     "author": "Anwar Hussain",
     "license": "MIT",
     "devDependencies": {
+        "@babel/eslint-parser": "^7.17.0",
         "@babel/preset-env": "^7.18.0",
         "@rollup/plugin-commonjs": "^22.0.0",
         "@rollup/plugin-node-resolve": "^13.3.0",
+        "eslint": "^8.16.0",
         "jest": "^28.1.0",
         "rollup": "^2.74.1",
         "rollup-plugin-babel": "^4.4.0",
