@@ -13,13 +13,16 @@ Example:
 ```js
 import { applyMiddleware } from 'tuktakjs';
 
-site: applyMiddleware(
-    authMiddleware,
-    permissionMiddleware,
-    async (root, args, ctx, info) => {
-        // your business logic
-    }
-);
+const resolvers = {
+    site: applyMiddleware(
+        authMiddleware,
+        permissionMiddleware,
+        async (root, args, ctx, info) => {
+            // your business logic
+        }
+    ),
+    // .... 
+};
 
 function authMiddleware(root, args, ctx, info, next) {
     // your middleware logic
