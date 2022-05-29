@@ -39,11 +39,17 @@ import { applyMiddleware } from 'tuktakjs';
 
 site: applyMiddleware(
     authMiddleware,
-    permissionMiddleware,
+    permissionMiddleware({ action: 'delete', resource: 'site' }),
     async (req, res) => {
         // your business logic
     }
 );
+
+function permissionMiddleware({ action, resource }) {
+    return (req, res, next) => {
+        // invoke next() after the permission check
+    };
+}
 
 function authMiddleware(req, res, next, ourNext) {
     // your middleware logic
