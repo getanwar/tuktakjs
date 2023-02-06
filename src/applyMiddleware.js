@@ -13,8 +13,9 @@ export const applyMiddleware =
             }
         };
         next();
-
-        await Promise.all(promises);
+        if(!result){
+            return await Promise.all(promises);
+        }
 
         return result;
     };
